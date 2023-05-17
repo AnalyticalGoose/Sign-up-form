@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <title>Sign-up Form</title>
 </head>
 <body>
@@ -39,32 +39,33 @@
 
                 <div>
                     <label class="form-label" for="first-name">FIRST NAME</label>
-                    <input type="text" id="first-name">
+                    <input type="text" pattern="^[^0-9]+$" id="first-name" placeholder="Thor" required>
                 </div>
 
                 <div>
                     <label class="form-label" for="last-name">LAST NAME</label>
-                    <input type="text" id="last-name">
+                    <input type="text" pattern="^[^0-9]+$" id="last-name" placeholder="Odinson" required>
                 </div>
 
                 <div>
                     <label class="form-label" for="email">EMAIL</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" placeholder="mjolnir@asgardmail.no" required>
                 </div>
 
                 <div>
                     <label class="form-label" for="phone">PHONE NUMBER</label>
-                    <input type="tel" id="phone">
+                    <input type="tel" pattern="^[^a-zA-Z]+$" id="phone" placeholder="01234 567 890" required>
                 </div>
                 
                 <div>
                     <label class="form-label" for="password">PASSWORD</label>
-                    <input type="password" id="password">
+                    <input type="password" id="password" placeholder="Password" required>
                 </div>
               
                 <div>
                     <label class="form-label" for="confirm-password">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm-password">
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                    <span id="password-warning" class="hidden">*Passwords do not match</span>
                 </div>
 
             </form>
